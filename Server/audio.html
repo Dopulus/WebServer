@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Audio Player</title>
+</head>
+<body>
+    <audio id="audioPlayer" preload="auto" loop aria-hidden="true">
+        <source src="shadow.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+        audioPlayer.volume = 0.1; // Imposta il volume iniziale basso
+        const isAudioPlaying = localStorage.getItem('isAudioPlaying');
+        const audioCurrentTime = localStorage.getItem('audioCurrentTime');
+        if (isAudioPlaying === 'true') {
+            if (audioCurrentTime) {
+                audioPlayer.currentTime = parseFloat(audioCurrentTime);
+            }
+            audioPlayer.play();
+        }
+    </script>
+</body>
+</html>

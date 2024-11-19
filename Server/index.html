@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Benvenuto nel server di dopu</title>
+    <meta name="description" content="Pagina web per vedere i progetti di dopu e per le funzioni del server">
+    <meta name="keywords" content="dopu, server, progetti, funzioni, Minecraft, TeamSpeak">
+    <meta name="author" content="dopu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Benvenuto nel server di dopu">
+    <meta property="og:description" content="Esplora i progetti di dopu e le funzioni del server.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="icona.png">
+    <link rel="preload" href="Moonlight-Sonata.mp3" as="audio">
+    <script>
+        new PwaUpdate();
+    </script>
+</head>
+<body>
+    <header>
+        <h1 class="animated-welcome glow">Benvenuto nel server di dopu!</h1>
+        <p class="audio-invite" aria-live="polite">Clicca ⏯️ per ascoltare la musica di sottofondo!</p>
+    </header>
+    
+    <aside class="sidebar open" role="navigation" aria-label="Sidebar menu">
+        <button id="toggleNav" aria-label="Mostra/Nascondi menu">☰</button>
+        <nav>
+            <ul>
+                <li><a href="Progetti/progetti.html" aria-label="Pagina Progetti">📂 Progetti</a></li>
+                <li><a href="Funzioni/funzioni.html" aria-label="Pagina Funzioni">⚙️ Funzioni</a></li>
+                <li><button id="toggleTheme" aria-label="Cambia tema">🌓 Tema Chiaro/Scuro</button></li>
+                <button id="startPartyButton" class="party-button">🎉</button>
+            </ul>
+        </nav>
+    </aside>
+    
+    <main>
+        <section class="welcome-section" aria-labelledby="intro-heading">
+            <h2 id="intro-heading" class="visually-hidden">Introduzione</h2>
+            <p>Benvenuto nel server di dopu! Qui puoi esplorare i progetti e le funzioni del server.</p>
+            <p>Per vedere i progetti di dopu, clicca su <a href="progetti.html">Progetti</a>.</p>
+            <p>Per scoprire le funzioni del server, come avviare e stoppare i server di Minecraft e TeamSpeak, clicca su <a href="funzioni.html">Funzioni</a>.</p>
+        </section>
+    </main>
+   
+    <footer>
+        <p>dopu</p>
+    </footer>
+    
+    <!-- Include l'iframe per l'audio -->
+    <div id="audioContainer"></div>
+    
+    <div class="audio-controls" role="region" aria-label="Controlli audio">
+        <button id="playPauseButton" class="play-icon" aria-label="Play/Pausa">⏯️</button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.1" title="Volume" aria-label="Controllo del volume">
+    </div>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>

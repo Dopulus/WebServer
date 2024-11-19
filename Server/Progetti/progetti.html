@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Progetti di dopu</title>
+    <meta name="description" content="Pagina dei progetti di dopu">
+    <meta name="keywords" content="dopu, progetti, portfolio">
+    <meta name="author" content="dopu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../icona.png">
+    <link rel="manifest" href="../manifest.json">
+</head>
+<body>
+    <header>
+        <h1 class="animated-welcome glow">Progetti di dopu</h1>
+    </header>
+
+    <aside class="sidebar open" role="navigation" aria-label="Sidebar menu">
+        <button id="toggleNav" aria-label="Mostra/Nascondi menu">☰</button>
+        <nav>
+            <ul>
+                <li><a href="../index.html" aria-label="Pagina Home">🏠 Home</a></li>
+                <li><a href="../Funzioni/funzioni.html" aria-label="Pagina Funzioni">⚙️ Funzioni</a></li>
+                <li><button id="toggleTheme" aria-label="Cambia tema">🌓 Tema Chiaro/Scuro</button></li>
+            </ul>
+        </nav>
+    </aside>
+    
+    <main>
+        <section class="projects-section" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">I progetti</h2>
+            <div class="project">
+                <h3>Progetto 1</h3>
+                <p>Descrizione del progetto 1. Questo progetto riguarda...</p>
+            </div>
+            <div class="project">
+                <h3>Progetto 2</h3>
+                <p>Descrizione del progetto 2. Questo progetto riguarda...</p>
+            </div>
+            <div class="project">
+                <h3>Progetto 3</h3>
+                <p>Descrizione del progetto 3. Questo progetto riguarda...</p>
+            </div>
+            <!-- Aggiungi altri progetti qui -->
+        </section>
+    </main>
+
+    <!-- Include l'iframe per l'audio -->
+    <div id="audioContainer"></div>
+    
+    <div class="audio-controls" role="region" aria-label="Controlli audio">
+        <button id="playPauseButton" class="play-icon" aria-label="Play/Pausa">⏯️</button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.1" title="Volume" aria-label="Controllo del volume">
+    </div>
+    
+    <footer>
+        <p>dopu</p>
+    </footer>
+    
+    <script src="../script.js" defer></script>
+</body>
+</html>
